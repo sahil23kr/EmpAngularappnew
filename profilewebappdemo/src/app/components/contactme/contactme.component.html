@@ -1,0 +1,45 @@
+
+<div>
+    <h2>Add Contact details!</h2>
+    <form #contactmeFrm="ngForm" (ngSubmit)="SubmitContactFrmData(contactmeFrm)">
+        <div>
+          Contact Name : <input type="text" name="name" placeholder="name" ngModel required />
+        </div>
+      <br>
+      <div>
+        Email : <input type="text" name="emailAddress" placeholder="emailAddress" ngModel required />
+      </div>
+      <br>
+        <div>
+            Phone No : <input type="text" name="phoneNo" placeholder="phoneNo" ngModel required />
+        </div>
+        <br>
+        <div>
+            Description : <input type="text" name="description" placeholder="description" ngModel required />
+        <br>
+        <!-- Submit Button -->
+        <button type="submit">Add</button>
+      </div>
+      </form>
+</div>
+<h2>Contact me Details!</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Description</th>
+            <th>Is Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contactme of _contactmeSer.ContactmeData">
+            <td>{{contactme.name}}</td>
+            <td>{{contactme.emailAddress}}</td>
+            <td>{{contactme.phoneNo}}</td>
+            <td>{{contactme.description}}</td>
+            <td>{{contactme.isActive}}</td>            
+        </tr>   
+    </tbody>
+</table>

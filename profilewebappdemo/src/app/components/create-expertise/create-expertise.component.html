@@ -1,0 +1,16 @@
+<h2>Create Expertise details!</h2>
+
+<div>
+    <form #expertiseFrm="ngForm" (ngSubmit)="SubmitExpertiseFrmData(expertiseFrm)">
+        <div>
+          Expertise Name : <input type="text" name="expertiseArea" placeholder="expertise Area" ngModel required />
+        </div>
+      <br>
+        <div>
+          Description : <input type="text" name="description" placeholder="description" ngModel required />
+        </div>
+        <br>
+        <!-- Submit Button -->
+        <button type="submit">Add</button>
+      </form>
+</div>

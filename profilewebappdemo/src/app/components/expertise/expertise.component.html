@@ -1,0 +1,21 @@
+
+<h2>Expertise Details</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Area of Expertise</th>
+            <th>Details</th>    
+            <th>Is Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let expertise of _expertiseSer.ExpertiseData">
+            <td>{{expertise.expertiseArea}}</td>
+            <td>{{expertise.description}}</td>
+            <td>{{expertise.isActive}}</td>
+        </tr>   
+</table>
+<br>
+<button routerLink="expert/create">Add Expertise</button>
+<router-outlet />
